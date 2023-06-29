@@ -1,4 +1,4 @@
-import ReactDOM from "react-dom/client";
+import {createRoot} from "react-dom/client";
 import LoadingComp from "./Loading";
 
 let container = null;
@@ -11,7 +11,7 @@ const Loading = {
     }
     container = document.createElement("div");
     container.className = loadingClass
-    ReactDOM.createRoot(container).render(<LoadingComp/>);
+    createRoot(container).render(<LoadingComp msg={msg}/>)
     document.body.append(container);
   },
   close() {

@@ -1,22 +1,18 @@
 import { useState } from 'react';
+import { flushSync } from 'react-dom';
 import './login.scss'
 import Loading from '../../components/Loading';
-
+Loading.open()
+setTimeout(() => {
+  Loading.close()
+}, 3000);
 function Login(){
   const [loginRotate,setLoginRotate] = useState(0)
   const [registerRotate,setRegisterRotate] = useState(-180)
-  function toRegister(){
-    setLoginRotate(180)
-    setRegisterRotate(0)
+  function revsereCard(){
+    setLoginRotate(val=>val+180)
+    setRegisterRotate(val=>val+180)
   }
-  function toLogin(){
-    setLoginRotate(0)
-    setRegisterRotate(-180)
-  }
-  Loading.open()
-  setTimeout(() => {
-    Loading.close()
-  }, 3000);
   
   return (
     <div className="container">
@@ -37,7 +33,7 @@ function Login(){
           <button className="logbtn">Login</button>
           <div className="subtitle">
             <span>No account yet? </span>
-            <span className="regtitle" onClick={toRegister}>
+            <span className="activetitle" onClick={revsereCard}>
               Register now
             </span>
           </div>
@@ -62,7 +58,7 @@ function Login(){
           <button className="logbtn">Register</button>
           <div className="subtitle">
             <span>Already have an account?</span>
-            <span className="regtitle" onClick={toLogin}>
+            <span className='activetitle' onClick={revsereCard}>
               Login now
             </span>
           </div>

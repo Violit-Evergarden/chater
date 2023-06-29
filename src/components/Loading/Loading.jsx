@@ -1,10 +1,10 @@
 import styles from "./index.module.css";
 import PropTypes from "prop-types";
 
-const Loading = () => {
-  // if (!msg) {
-  //   return null;
-  // }
+const Loading = ({msg}) => {
+  if (!msg) {
+    return null;
+  }
   return (
     <div className={styles["t-loading"]}>
       <div className={styles["t-loading__toast"]}>
@@ -16,10 +16,10 @@ const Loading = () => {
 };
 export default Loading;
 
-// Loading.propTypes = {
-//   msg: PropTypes.string,
-// };
+Loading.propTypes = {
+  msg: PropTypes.string,
+};
 
-// Loading.defaultProps = {
-//   msg: "正在加载...",
-// };
+Loading.defaultProps = {
+  msg: "正在加载...",
+};
