@@ -1,0 +1,89 @@
+.container{
+  background-image: linear-gradient(to right,rgb(187, 164, 255),rgb(93, 220, 255));
+  height: 100vh;
+  .box{
+    position: relative;
+    transform-style: preserve-3d;
+      -webkit-perspective: 1000px;
+      -moz-perspective: 1000px;
+      -ms-perspective: 1000px;
+      perspective: 1000px;
+    width: 25%;
+    top: 20%;
+    margin: auto;
+    // margin-top: 100px;
+    .card {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 1px 1px 20px rgb(207, 198, 211);
+      background-color: white;
+      border-radius: 12px;
+      padding: 30px;
+      transition: 1s;
+      backface-visibility: hidden;
+      .title {
+        font-size: 27px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+      }   
+      .inp {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;   
+        .name {
+          font-size: 14px;
+          font-weight: 500;
+          color: rgba(68, 68, 68, 0.628);
+        }   
+        input {
+          margin-top: 16px;
+          height: 30px;
+          border: 1.5px solid rgba(200, 200, 200, 0.53);
+          border-radius: 6px;
+          transition: .5s;
+          outline: none;
+          padding-left: 10px;
+          font-size: 16px;    
+          &:focus {
+            border-color: rgb(90, 189, 255);
+          }
+        }
+      }   
+      .logbtn {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        height: 35px;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        font-weight: bolder;
+        border: none;
+        cursor: pointer;
+        background-color: rgb(24, 198, 201);
+        transition: .3s;    
+        &:hover {
+          background-color: rgb(42, 230, 233);
+        }   
+        &:active {
+          background-color: rgb(38, 172, 175);
+        }
+      }   
+      .subtitle {
+        font-size: 14px;    
+        span:last-child {
+          color: #17abef;
+          cursor: pointer;    
+          &:hover {
+            color: #53c9ff;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
