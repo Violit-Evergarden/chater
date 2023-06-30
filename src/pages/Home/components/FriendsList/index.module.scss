@@ -1,0 +1,55 @@
+.friendsbox{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(67, 61, 86);
+  height: 100%;
+  overflow: auto;
+  .friend{
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(153, 153, 153, 0.488);
+    cursor: pointer;
+    &:hover{
+      background-color: rgb(85, 77, 112);
+    }
+    .temp{
+      display: flex;
+      align-items: center;
+      img {
+        width: 40px;
+        border-radius: 50%;
+        border: 1px solid white;
+        position: relative;
+        // &::after{
+        //   content: '123';
+        //   color: white;
+        //   position: absolute;
+        //   right: 0;
+        //   bottom: 0;
+        //   width: 8px;
+        //   height: 8px;
+        //   background-color: aliceblue;
+        //   border-radius: 50%;
+        // }
+      }
+      .name {
+        font-size: 20px;
+        margin-left: 16px;
+      }
+    }
+    .status{
+      margin-left: 16px;
+      display: flex;
+      align-items: center;
+      .circle{
+        width: 8px;
+        height: 8px;
+        background-color: white;
+        border-radius: 50%;
+      }
+    }
+  }
+}

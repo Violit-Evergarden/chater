@@ -1,0 +1,39 @@
+.navbar{
+  background-color: rgb(9, 170, 245);
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  justify-content: space-between;
+  .name{
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  }
+  .temp{
+    display: flex;
+    .avator {
+      width: 40px;
+      margin-right: 24px;
+      border-radius: 50%;
+      border: 1px solid rgb(223, 223, 223);
+      cursor: pointer;
+    }
+    .logout{
+      border-radius: 10px;
+      border: none;
+      background-color: rgb(240, 174, 51);
+      color: #ffffff;
+      font-size: 16px;
+      padding: 0 16px;
+      cursor: pointer;
+      box-shadow: 1px 1px 5px black;
+      transition: .3s;
+      &:hover{
+        background-color: rgb(255, 185, 55);
+      }
+      &:active{
+        background-color: rgb(224, 161, 43);
+      }
+    }
+  }
+}

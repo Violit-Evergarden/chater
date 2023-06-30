@@ -1,3 +1,19 @@
 .main{
-  color: red;
+  // color: red;
+
+
+  .main{
+    display: flex;
+    .right{
+      width: 20%;
+      height: calc(100vh - 74px);
+    }
+    .left{
+      flex: 1;
+      background-image: linear-gradient(to left top,rgb(125, 255, 216) ,rgb(170, 79, 255));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }

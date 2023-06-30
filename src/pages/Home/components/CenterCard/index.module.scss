@@ -1,0 +1,28 @@
+
+.cardbox{
+  .btn{
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(240, 174, 51);
+    color: #ffffff;
+    font-size: 20px;
+    padding: 0 16px;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px black;
+    transition: .3s;
+    height: 50px;
+    width: 200px;
+    &:hover {
+      background-color: rgb(255, 185, 55);
+    }
+    &:active {
+      background-color: rgb(224, 161, 43);
+    }
+  }
+}
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.533);
+  margin-bottom: 20px;
+}

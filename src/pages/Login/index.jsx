@@ -1,19 +1,28 @@
-import { useState } from 'react';
-import { flushSync } from 'react-dom';
+import { useState,useRef } from 'react';
 import './login.scss'
-import Loading from '../../components/Loading';
-Loading.open()
-setTimeout(() => {
-  Loading.close()
-}, 3000);
+import {Loading,message} from '@/components/common'
+
 function Login(){
   const [loginRotate,setLoginRotate] = useState(0)
   const [registerRotate,setRegisterRotate] = useState(-180)
+
+  const regBtn = useRef(null)
   function revsereCard(){
     setLoginRotate(val=>val+180)
     setRegisterRotate(val=>val+180)
   }
-  
+  function login(){
+    message('hhhh');
+  }
+
+  function register(){
+    Loading.open();
+    setTimeout(() => {
+      Loading.close();
+      message({msg:'注册成功！',type:'success'})
+      regBtn.current.click()
+    }, 3000);
+  }
   return (
     <div className="container">
       <div className="box">
@@ -30,7 +39,7 @@ function Login(){
             <div className="name">password:</div>
             <input type="password" />
           </div>
-          <button className="logbtn">Login</button>
+          <button className="logbtn" onClick={login}>Login</button>
           <div className="subtitle">
             <span>No account yet? </span>
             <span className="activetitle" onClick={revsereCard}>
@@ -55,10 +64,10 @@ function Login(){
             <div className="name">confirm password:</div>
             <input type="password" />
           </div>
-          <button className="logbtn">Register</button>
+          <button className="logbtn" onClick={register}>Register</button>
           <div className="subtitle">
             <span>Already have an account?</span>
-            <span className='activetitle' onClick={revsereCard}>
+            <span className='activetitle' ref={regBtn} onClick={revsereCard}>
               Login now
             </span>
           </div>
