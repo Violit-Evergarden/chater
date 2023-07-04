@@ -22,8 +22,7 @@ jobs:
       uses: easingthemes/ssh-deploy@v2.1.5
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      with:
-        server: ${{ secrets.SERVER }}
-        username: ${{ secrets.USERNAME }}
-        local_path: ./build
-        server_path: /www/wwwroot
+        REMOTE_HOST: ${{ secrets.SERVER }}
+        REMOTE_USER: ${{ secrets.USERNAME }}
+        Source: ./build
+        TARGET: /www/wwwroot
