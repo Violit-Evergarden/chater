@@ -1,4 +1,4 @@
-import { lazy,useState,useEffect } from 'react'
+import { lazy,useState } from 'react'
 import './home.scss'
 import logo from './logo192.png'
 
